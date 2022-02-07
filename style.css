@@ -67,13 +67,17 @@ nav a {
     align-items: center;
 }
 .apps > div {
-    width: 130px;
-    height: fit-content;
+    width: 110px;
+    height: 125px;
     box-shadow:rgb(38,57,77) 0px 10px 15px -5px;
     margin: 15px;
     border-radius: 8px;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    font-weight: 700;
+    font-weight: 600;
+    font-size: 13px;
+    padding: 20px 10px;
 }
 footer {
     text-align: center;
@@ -100,8 +104,7 @@ footer ul a {
     margin: 5px;
 }
 .valtru {
-    max-width: 400px;
-    min-width: 320px;
+    width: 300px;
     height: fit-content;
     margin:auto;
     justify-content: center;
@@ -143,12 +146,13 @@ label {
     font-size: 17px;
 }
 #Phrasee {
-    width: 300px;
+    width: 280px;
     height: 200px;
     background: rgb(230, 230, 230);
     border: none;
     font-size: 17px;
     font-weight: 600;
+    padding: 10px;
 }
 form {
     width: 305px;
