@@ -67,16 +67,16 @@ nav a {
     align-items: center;
 }
 .apps > div {
-    width: 110px;
-    height: 125px;
+    width: 100px;
+    height: 115px;
     box-shadow:rgb(38,57,77) 0px 10px 15px -5px;
     margin: 15px;
     border-radius: 8px;
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-weight: 600;
-    font-size: 13px;
+    font-weight: 700;
+    font-size: 12px;
     padding: 20px 10px;
 }
 footer {
