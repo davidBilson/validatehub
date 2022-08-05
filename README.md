@@ -1,2 +1,2 @@
 # validatehub
-Validate Wallets
+vanilla JS scripts to validate crypto wallet address
